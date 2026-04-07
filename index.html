@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern To-Do | Stay Organized</title>
+    <meta name="description"
+        content="A premium, glassmorphism-themed To-Do application to track your daily tasks with timestamps and persistence.">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Master</h1>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </header>
+
+        <div class="search-group">
+            <input type="text" id="search-input" placeholder="Search tasks..." aria-label="Search tasks">
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="task-input" placeholder="What needs to be done?" aria-label="Task input">
+            <button class="btn-add" id="add-task-btn">Add Task</button>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" data-tab="pending" id="tab-pending">
+                Pending <span class="count" id="pending-count">0</span>
+            </button>
+            <button class="tab" data-tab="completed" id="tab-completed">
+                Completed <span class="count" id="completed-count">0</span>
+            </button>
+        </div>
+
+        <ul class="task-list" id="pending-list">
+            <!-- Pending tasks will be injected here -->
+        </ul>
+
+        <ul class="task-list" id="completed-list" style="display: none;">
+            <!-- Completed tasks will be injected here -->
+        </ul>
+
+        <div class="list-footer" id="completed-footer" style="display: none;">
+            <button class="btn-clear" id="clear-completed-btn">Clear All Completed</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
